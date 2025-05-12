@@ -942,7 +942,7 @@ public function adminPinjaman1(Request $request){
             Peminjaman1::create([
                 'pinjaman_id' => $validated['pinjaman_id'],
                 'ttotalpeminjaman1' => $validated['ttotalpeminjaman1'],
-                'tpembayaran1' => $validated['tpembayaran1'],
+                'tpembayaran1' => 0,
                 'tbunga1' => $validated['tbunga1'],
                 'ttotalpokok1' => $validated['ttotalpokok1'],
                 'ttotalbunga1' => $validated['ttotalbunga1'],
@@ -964,7 +964,7 @@ public function adminPinjaman1(Request $request){
             Peminjaman2::create([
                 'pinjaman_id' => $validated['pinjaman_id'],
                 'ttotalpeminjaman2' => $validated['ttotalpeminjaman1'],
-                'tpembayaran2' => $validated['tpembayaran1'],
+                'tpembayaran2' => 0,
                 'tbunga2' => $validated['tbunga1'],
                 'ttotalpokok2' => $validated['ttotalpokok1'],
                 'ttotalbunga2' => $validated['ttotalbunga1'],
