@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f8f9fa;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none; /* Sembunyikan ikon default */
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    font-size: 24px;
+    color: white;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gradient-green {
+    background: linear-gradient(to bottom right, #008000, #001a00);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gradient-blue {
+    background: linear-gradient(to bottom right, #18798f, #264cd4);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gradient-red {
+    background: linear-gradient(to bottom right, #d42626, #511726);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.gradient-abu {
+    background: linear-gradient(to bottom right, #575757, #919191);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .card h6,
+.card h4,
+.card h2,
+.card p {
+    margin-bottom: 0.5rem;
+} */
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1d3b8b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar h5 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link.active {
+    background-color: #2979ff;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    width: 100%;
+    background-color: #a40000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    font-size: 28px;
+    width: 40px;
+    background-color: #000000ac;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    z-index: 1000;
+}
+
+.table-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    max-width: 100%;
+}
+.table thead th {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.table tbody td {
+    text-align: center;
+    font-size: 14px;
+    padding: 12px 8px;
+}
+.badge {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+.btn-outline-primary,
+.btn-outline-danger {
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.action-btn {
+    width: auto;
+    min-width: 80px;
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+.buttonspace {
+    gap: 10px;
+    justify-content: center;
+}
+
+/* .card-custom {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+} */
+
+.header-date {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-text {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.info-box {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.bg-gray {
+    background-color: #adb5bd;
+}
+
+.bg-red {
+    background-color: #ff6b6b;
+}
+
+.bg-green {
+    background-color: #8bc34a;
+}
+
+.sisa-cicilan {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    background-color: #c8e6c9;
+    border-radius: 8px;
+}
+
+.icon-setting {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.card-custom {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.card-large {
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-custom-tabungan {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 5px 10px 1px rgba(0, 0, 0, 0.1);
+    height: 340px;
+}
+
+.header-title {
+    font-size: 40px;
+    color: #1a2d42;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-header {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 999;
+}
+
+.date-input {
+    display: block;
+    margin: auto;
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.status-text {
+    color: red;
+    font-size: 14px;
+}
+
+.info-box {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.bg-gray {
+    background-color: #adb5bd;
+}
+
+.bg-red {
+    background-color: #ff6b6b;
+}
+
+.bg-green {
+    background-color: #8bc34a;
+}
+
+.sisa-cicilan {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    background-color: #c8e6c9;
+    border-radius: 8px;
+}
+
+.container .my-5,
+.header-title,
+.header-date,
+.date-input {
+    position: relative;
+    left: 120px;
+}
+
+.text-deskripsi {
+    text-align: center;
+    margin-left: 50px;
+}
+
+h6 {
+    font-weight: bold;
+}
+
+.icon-setting {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+a i {
+    width: 20px;
+}
+
+/* Responsiveness */
+
+/* Untuk layar kecil (ponsel) */
+@media screen and (max-width: 576px) {
+    .carousel-control-prev {
+        left: 0px; /* Lebih dekat ke kiri */
+    }
+
+    .carousel-control-next {
+        right: 0px; /* Lebih dekat ke kanan */
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .container .my-5,
+    .header-title,
+    .header-date,
+    .date-input {
+        position: relative;
+        left: 0;
+    }
+
+    .text-deskripsi {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .header-title {
+        font-size: 30px;
+    }
+
+    .text-harga {
+        font-size: 12px;
+    }
+}
+
+/* Untuk tablet (portrait) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .carousel-control-prev {
+        left: 0px; /* Lebih dekat ke kiri */
+    }
+
+    .carousel-control-next {
+        right: 0px; /* Lebih dekat ke kanan */
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .container .my-5,
+    .header-title,
+    .header-date,
+    .date-input {
+        position: relative;
+        left: 0;
+    }
+
+    .text-deskripsi {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .header-title {
+        font-size: 30px;
+    }
+}
+
+/* Untuk tablet (landscape) dan laptop kecil */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .carousel-control-prev {
+        left: 0px; /* Lebih dekat ke kiri */
+    }
+
+    .carousel-control-next {
+        right: 0px; /* Lebih dekat ke kanan */
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .container .my-5,
+    .header-title,
+    .header-date,
+    .date-input {
+        position: relative;
+        left: 0;
+    }
+
+    .text-deskripsi {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .header-title {
+        font-size: 30px;
+    }
+
+    .sembunyi {
+        display: none;
+    }
+}

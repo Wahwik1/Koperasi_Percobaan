@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #1a2d42;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar img {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar h5 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link.active {
+    background-color: #2e4156;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #2e4156;
+}
+
+.sidebar .nav-link i {
+    width: 30px;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    width: 100%;
+    background-color: #a40000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    font-size: 28px;
+    width: 40px;
+    background-color: #000000ac;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    z-index: 1000;
+}
+.container {
+    max-width: 800px;
+    height: 1800px;
+}
+.card {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.header-title {
+    color: #2e4156;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.header-date {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.date-input {
+    display: block;
+    margin: auto;
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.alert-text {
+    color: red;
+    font-size: 10px;
+}
+
+.btn-save {
+    background-color: #1a2d42;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container,
+.user-detail,
+.header-title,
+.header-date,
+.date-input,
+.card {
+    position: relative;
+    left: 70px;
+}
+
+.pembayaran-pokok-background1,
+.pembayaran-bunga-background1,
+.pembayaran-denda-background1,
+.total-peminjaman-background1,
+.pembayaran-background1,
+.pokok-seharusnya-background1,
+.sisa-pokok-background1,
+.total-pembayaran-background1 {
+    background-color: rgba(128, 128, 128, 0.302);
+}
+
+.pembayaran-pokok-background2,
+.pembayaran-bunga-background2,
+.pembayaran-denda-background2,
+.total-peminjaman-background2,
+.pembayaran-background2,
+.pokok-seharusnya-background2,
+.sisa-pokok-background2,
+.total-pembayaran-background2 {
+    background-color: rgba(128, 128, 128, 0.302);
+}
+
+.pembayaran-tabungan-background,
+.pembayaran-tabungan-background2 {
+    background-color: rgba(128, 128, 128, 0.302);
+}
+
+.buttonedit {
+    position: absolute;
+}
+
+/* Responsiveness */
+
+/* Untuk layar kecil (ponsel) */
+@media screen and (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .text-overbook {
+        font-size: 16px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .profile-card {
+        height: 750px;
+    }
+
+    .nomorpeserta {
+        width: 50px;
+    }
+
+    .container,
+    .user-detail,
+    .header-title,
+    .header-date,
+    .date-input,
+    .card {
+        position: unset;
+        left: 0px;
+    }
+}
+
+/* Untuk tablet (portrait) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .buttonedit {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .profile-card {
+        height: 750px;
+    }
+
+    .container,
+    .user-detail,
+    .header-title,
+    .header-date,
+    .date-input,
+    .card {
+        position: unset;
+        left: 0px;
+    }
+}
+
+/* Untuk tablet (landscape) dan laptop kecil */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .buttonedit {
+        position: relative;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .profile-card {
+        height: 750px;
+    }
+
+    .container,
+    .user-detail,
+    .header-title,
+    .header-date,
+    .date-input,
+    .card {
+        position: unset;
+        left: 0px;
+    }
+}

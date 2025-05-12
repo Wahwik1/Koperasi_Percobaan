@@ -3,30 +3,36 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var list<string>
+     * @var array<int, string>
      */
     protected $fillable = [
         'name',
         'email',
+        'jeniskelamin',
+        'nik',
+        'ttl',
+        'nohp',
+        'alamat',
+        'is_admin',
         'password',
     ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var list<string>
+     * @var array<int, string>
      */
     protected $hidden = [
         'password',
@@ -44,5 +50,24 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    protected $with = ['peminjaman1', 'peminjaman2','tabungan', 'pesan1'];
+
+    public function peminjaman1(): HasOne
+    {
+        return $this->hasOne(Peminjaman1::class, 'pinjaman_id'); // pastikan foreign key-nya benar
+    }
+    public function peminjaman2(): HasOne
+    {
+        return $this->hasOne(Peminjaman2::class, 'pinjaman_id');
+    }
+    public function tabungan(): HasOne
+    {
+        return $this->hasOne(Tabungan::class, 'tabungan_id');
+    }
+    public function pesan1(): HasOne
+    {
+        return $this->hasOne(Pesan1::class, 'pesan_id');
     }
 }

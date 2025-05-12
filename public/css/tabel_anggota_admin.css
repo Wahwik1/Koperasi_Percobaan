@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #1a2d42;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar img {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar h5 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link.active {
+    background-color: #2e4156;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #2e4156;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    width: 100%;
+    background-color: #a40000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    font-size: 28px;
+    width: 40px;
+    background-color: #000000ac;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    z-index: 1000;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+/* Table Modern */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+.table {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #1a2d42;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f5f7;
+}
+
+.table tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+.table td {
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 12px;
+    text-align: center;
+}
+
+.table th,
+.table td {
+    border: none;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.action-btn {
+    position: relative;
+    width: 80px;
+    justify-content: center;
+}
+
+.buttonspace {
+    justify-content: space-between;
+}
+
+.text-center {
+    position: relative;
+    width: 95%;
+}
+
+.table-container,
+.btn-group,
+.text-center,
+.action-btn {
+    left: 150px;
+}
+
+.sidebar .nav-link i {
+    width: 20px;
+}
+
+.password {
+    font-size: 15px;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .table-container,
+    .btn-group,
+    .text-center,
+    .action-btn {
+        left: 0px;
+    }
+}
+
+/* Untuk tablet (portrait) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .table-container,
+    .btn-group,
+    .text-center,
+    .action-btn {
+        left: 0px;
+    }
+}
+
+/* Untuk tablet (landscape) dan laptop kecil */
+@media screen and (min-width: 712px) and (max-width: 1280px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .table-container,
+    .btn-group,
+    .text-center,
+    .action-btn {
+        left: 0px;
+    }
+}

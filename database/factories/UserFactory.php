@@ -26,8 +26,14 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
+            'jeniskelamin' => fake()->randomElement(['Laki-laki', 'Perempuan']),
+            'nik' => fake()->unique()->nik(), // atau pakai fake()->numerify('##############') untuk 16 digit acak
+            'ttl' => fake()->date('Y-m-d') . ', ' . fake()->city(),
+            'nohp' => fake()->phoneNumber(),
+            'alamat' => fake()->address(),
+            'is_admin' => false,
             'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
+            'password' => static::$password ??= Hash::make('wahwik123'),
             'remember_token' => Str::random(10),
         ];
     }
@@ -39,6 +45,12 @@ class UserFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'email_verified_at' => null,
+        ]);
+    }
+    public function admin(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'is_admin' => true,
         ]);
     }
 }

@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1d3b8b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar h5 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .nav-link {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-link.active {
+    background-color: #2979ff;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .nav-link i {
+    width: 30px;
+}
+
+.sidebar .logout {
+    margin-top: auto;
+    width: 100%;
+    background-color: #a40000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    font-size: 28px;
+    width: 40px;
+    background-color: #000000ac;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    z-index: 1000;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    /* max-width: 600px; */
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    display: block;
+    margin: 0 auto 20px;
+}
+.form-control {
+    background-color: #f1f1f1;
+    border: none;
+    text-align: justify;
+}
+.btn-contact {
+    float: right;
+}
+
+a i {
+    width: 20px;
+}
+
+/* Responsiveness */
+
+@media screen and (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .profile-card {
+        height: 750px;
+    }
+}
+
+/* Untuk tablet (portrait) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .profile-card {
+        height: 750px;
+    }
+}
+
+/* Untuk tablet (landscape) dan laptop kecil */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        z-index: 999;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .sidebar.show {
+        transform: translateY(0);
+    }
+
+    .profile-card {
+        height: 750px;
+    }
+}

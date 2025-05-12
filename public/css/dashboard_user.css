@@ -1,0 +1,153 @@
+body {
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.container {
+    margin-top: 50px;
+}
+
+.container h1 {
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(to right, #3087d9, #194873);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container h2 {
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(to right, #3087d9, #194873);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container hr {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 3px;
+    background-image: linear-gradient(to right, #3087d9, #194873);
+}
+
+.container h4 {
+    color: #2e4156;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 35px 0px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.logout-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: red;
+}
+.settings-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: black;
+}
+
+.container a {
+    margin-top: 10px;
+    width: 106px;
+    height: 38px;
+    font-weight: 500;
+}
+
+.login-button {
+    width: 106px;
+    height: 45px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(to right, #3087d9, #22dafc);
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-border {
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 10px;
+}
+
+/* Untuk layar kecil (ponsel) */
+@media screen and (max-width: 576px) {
+    .container h1 {
+        font-size: 30px;
+    }
+    .container h2 {
+        font-size: 30px;
+    }
+
+    .container .company-profile {
+        margin: 20px 0px;
+    }
+
+    .container a {
+        width: 100px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+/* Untuk tablet (portrait) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .container h1 {
+        font-size: 35px;
+    }
+    .container h2 {
+        font-size: 35px;
+    }
+    .container .company-profile {
+        margin: 20px 0px;
+    }
+    .container a {
+        width: 100px;
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+/* Untuk tablet (landscape) dan laptop kecil */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .container h1 {
+        font-size: 30px;
+    }
+    .container h2 {
+        font-size: 30px;
+    }
+    .container .company-profile {
+        margin: 20px 20px;
+    }
+}
+
+/* Untuk desktop */
+@media screen and (min-width: 993px) {
+    .container h1 {
+        font-size: 40px;
+    }
+    .container h2 {
+        font-size: 40px;
+    }
+    .container .company-profile {
+        margin: 20px 50px;
+    }
+}
